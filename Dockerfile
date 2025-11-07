@@ -21,7 +21,7 @@ COPY src ./src
 RUN pip install --upgrade pip setuptools wheel && \
     pip install --no-cache-dir .
 
-COPY example_for_mac.py example_tts.py example_vc.py multilingual_app.py ./
+COPY example_tts.py example_vc.py ./
 
 CMD ["python", "example_tts.py"]
 

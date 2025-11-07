@@ -3,15 +3,12 @@ import torchaudio as ta
 
 from chatterbox.vc import ChatterboxVC
 
-# Automatically detect the best available device
-if torch.cuda.is_available():
-    device = "cuda"
-elif torch.backends.mps.is_available():
-    device = "mps"
-else:
-    device = "cpu"
+# Require CUDA GPU
+if not torch.cuda.is_available():
+    raise RuntimeError("CUDA GPU not available. This script requires a CUDA-capable GPU.")
 
-print(f"Using device: {device}")
+device = "cuda"
+print("Using device: cuda")
 
 AUDIO_PATH = "YOUR_FILE.wav"
 TARGET_VOICE_PATH = "YOUR_FILE.wav"
