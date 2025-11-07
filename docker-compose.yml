@@ -9,11 +9,10 @@ services:
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
-    # Uncomment the lines below if you want to allow GPU access (requires Docker with NVIDIA Container Toolkit)
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - capabilities: [gpu]
-    #           driver: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
 
