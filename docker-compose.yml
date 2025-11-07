@@ -1,7 +1,7 @@
 services:
   chatterbox:
     build:
-      context: /Users/hoangwy/Desktop/Data/Projects/chatterbox_fast
+      context: .
       dockerfile: Dockerfile
     container_name: chatterbox-tts
     ports:
