@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.so
+.git
+.gitignore
+.env
+.venv
+.vscode
+.idea
+*.log
+*.wav
+Chatterbox-Multilingual.png
+dist/
+build/
+pip-wheel-metadata/
+__pypackages__/
+
