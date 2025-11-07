@@ -21,7 +21,7 @@ COPY src ./src
 RUN pip install --upgrade pip setuptools wheel && \
     pip install --no-cache-dir .
 
-COPY example_tts.py example_vc.py ./
+COPY example_tts.py example_vc.py corey.mp3 ./
 
 CMD ["python", "example_tts.py"]
 
